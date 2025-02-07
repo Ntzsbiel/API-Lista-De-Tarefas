@@ -1,34 +1,29 @@
-# DIO - Trilha .NET - API e Entity Framework
-www.dio.me
+# 📌 DIO - Trilha .NET - API e Entity Framework  
+www.dio.me  
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de API e Entity Framework, da trilha .NET da DIO.
+## 🏆 Desafio Concluído  
+Este repositório contém a solução para o desafio de projeto do módulo de API e Entity Framework da trilha .NET da DIO. O objetivo foi construir uma **API para gerenciamento de tarefas**, permitindo operações de CRUD (Create, Read, Update e Delete).  
 
-## Contexto
-Você precisa construir um sistema gerenciador de tarefas, onde você poderá cadastrar uma lista de tarefas que permitirá organizar melhor a sua rotina.
+## 📌 Contexto  
+Desenvolvi um sistema gerenciador de tarefas para auxiliar na organização da rotina. A API permite criar, visualizar, atualizar e excluir tarefas, seguindo boas práticas de desenvolvimento e utilizando o **Entity Framework** para interação com o banco de dados.  
 
-Essa lista de tarefas precisa ter um CRUD, ou seja, deverá permitir a você obter os registros, criar, salvar e deletar esses registros.
+A aplicação foi implementada no formato **Web API**, garantindo flexibilidade e fácil integração com outras aplicações.  
 
-A sua aplicação deverá ser do tipo Web API ou MVC, fique a vontade para implementar a solução que achar mais adequado.
+## 🛠 Estrutura da Classe  
+A principal entidade do sistema é a **Tarefa**, modelada conforme o diagrama abaixo:  
 
-A sua classe principal, a classe de tarefa, deve ser a seguinte:
+![Diagrama da classe Tarefa](imagens/diagrama.png)  
 
-![Diagrama da classe Tarefa](diagrama.png)
+A estrutura foi desenvolvida utilizando **Migrations** para manter o banco de dados atualizado automaticamente.  
 
-Não se esqueça de gerar a sua migration para atualização no banco de dados.
+## 🚀 Métodos Implementados  
 
-## Métodos esperados
-É esperado que você crie o seus métodos conforme a seguir:
+### **Swagger**  
+A API conta com uma documentação interativa gerada com **Swagger**, permitindo testes diretos nos endpoints:  
 
+![Métodos Swagger](imagens/swagger.png)  
 
-**Swagger**
-
-
-![Métodos Swagger](swagger.png)
-
-
-**Endpoints**
-
+### **Endpoints Disponíveis**  
 
 | Verbo  | Endpoint                | Parâmetro | Body          |
 |--------|-------------------------|-----------|---------------|
@@ -41,7 +36,8 @@ Não se esqueça de gerar a sua migration para atualização no banco de dados.
 | GET    | /Tarefa/ObterPorStatus  | status    | N/A           |
 | POST   | /Tarefa                 | N/A       | Schema Tarefa |
 
-Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
+### **Modelo de Tarefa (Schema)**  
+Este é o modelo utilizado nos métodos que exigem envio de dados no corpo da requisição:  
 
 ```json
 {
@@ -51,8 +47,3 @@ Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que e
   "data": "2022-06-08T01:31:07.056Z",
   "status": "Pendente"
 }
-```
-
-
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
